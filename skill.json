@@ -1,0 +1,60 @@
+{
+  "name": "genpark-personal-agent-brain-wave-spectral-entropy-fatigue-skill",
+  "version": "1.0.0",
+  "title": "EEG Spectral Entropy & Neurocognitive Mental Fatigue Tracker Skill",
+  "description": "EEG spectral entropy, delta-to-alpha ratio, P300 latency proxy, neurocognitive fatigue biomarker, and restorative rest index. Built for GenPark (https://www.genpark.ai).",
+  "homepage": "https://www.genpark.ai",
+  "linkedin": "https://www.linkedin.com/company/92955550",
+  "category": "personal-agent",
+  "topics": [
+    "eeg",
+    "spectral-entropy",
+    "mental-fatigue",
+    "neurocognitive",
+    "personal-agent",
+    "model-context-protocol",
+    "genpark"
+  ],
+  "tools": [
+    {
+      "name": "calculate_theta_beta_ratio_and_entropy",
+      "description": "Compute Theta/Beta Ratio (TBR) and Spectral Entropy (Shannon) from frontal EEG power band bands.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "theta_power_uv2": {
+            "type": "number"
+          },
+          "alpha_power_uv2": {
+            "type": "number"
+          },
+          "beta_power_uv2": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "theta_power_uv2",
+          "beta_power_uv2"
+        ]
+      }
+    },
+    {
+      "name": "synthesize_neuro_recovery_non_sleep_deep_rest_protocol",
+      "description": "Prescribe Non-Sleep Deep Rest (NSDR) or binaural beat entrainment to restore prefrontal cortex executive focus.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "fatigue_index_score": {
+            "type": "number"
+          },
+          "available_break_minutes": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "fatigue_index_score"
+        ]
+      }
+    }
+  ]
+}
